@@ -15,16 +15,11 @@ Key objectives:
 - Understand relational database concepts
 - Apply SQL to real-world analytical problems
 - Build a structured SQL portfolio
-
-Official challenge source:  
-👉 https://8weeksqlchallenge.com/
-
 ---
 
 ## 🗂️ Repository Structure
 
 The repository is organized by week, with each folder representing one case study from the challenge:
-
 
 ## Challenge Overview
 
@@ -38,5 +33,20 @@ The repository is organized by week, with each folder representing one case stud
 | Week 6 | Clique Bait | [Case Study #6 - Clique Bait](Case%20Study%20%236%20-%20Clique%20Bait/) · [Queries](week-06/queries.sql) |
 | Week 7 | Balanced Tree | [Case Study #7 - Balanced Tree Clothing Co](Case%20Study%20%237%20-%20Balanced%20Tree%20Clothing%20Co/) · [Queries](week-07/queries.sql) |
 | Week 8 | Fresh Segments | [Case Study #8 - Fresh Segments](Case%20Study%20%238%20-%20Fresh%20Segments/) · [Queries](week-08/queries.sql) |
+
+---
+
+## Purpose
+This repository is intended for educational and portfolio purposes. It serves as:
+- A structured record of SQL practice
+- A reference for solving analytical SQL problems
+- A demonstration of foundational SQL and data analysis skills
+
+---
+## Reference
+Challenge source:  
+https://8weeksqlchallenge.com/
+
+All datasets and case study concepts belong to their respective creators.
 
 
