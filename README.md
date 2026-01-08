@@ -31,8 +31,8 @@ The repository is organized by week, with each folder representing one case stud
 | Week | Case Study | Files |
 |------|-----------|-------|
 | Week 1 | Danny's Diner | [Case Study #1 – Danny's Diner](Case%20Study%20%231%20-%20Danny's%20Diner/) · [Queries](week-01/queries.sql) |
-| Week 2 | Pizza Runner | [Folder](week-02/) · [Queries](week-02/queries.sql) |
-| Week 3 | Foodie-Fi | [Folder](week-03/) · [Queries](week-03/queries.sql) |
+| Week 2 | Pizza Runner | [Case Study #2 – Pizza Runner](Case%20Study%20%232%20-%20Pizza%20Runner/) · [Queries](week-02/queries.sql) |
+| Week 3 | Foodie-Fi | [Case Study #3 – Foodie-Fi](Case%20Study%20%233%20-%20Foodie-Fi/) · [Queries](week-03/queries.sql) |
 | Week 4 | Data Bank | [Folder](week-04/) · [Queries](week-04/queries.sql) |
 | Week 5 | Data Mart | [Folder](week-05/) · [Queries](week-05/queries.sql) |
 | Week 6 | Clique Bait | [Folder](week-06/) · [Queries](week-06/queries.sql) |
