@@ -36,7 +36,7 @@ The repository is organized by week, with each folder representing one case stud
 | Week 4 | Data Bank | [Case Study #4 - Data Bank](Case%20Study%20%234%20-%20Data%20Bank/) · [Queries](week-04/queries.sql) |
 | Week 5 | Data Mart | [Case Study #5 - Data Mart](Case%20Study%20%235%20-%20Data%20Mart/) · [Queries](week-05/queries.sql) |
 | Week 6 | Clique Bait | [Case Study #6 - Clique Bait](Case%20Study%20%236%20-%20Clique%20Bait/) · [Queries](week-06/queries.sql) |
-| Week 7 | Balanced Tree | [Case Study #7 - Balanced Tree Clothing Co](Case%20Study%20%237%20-%20Balanced%20Tree%Co/) · [Queries](week-07/queries.sql) |
+| Week 7 | Balanced Tree | [Case Study #7 - Balanced Tree Clothing Co](Case%20Study%20%237%20-%20Balanced%20Tree%20Clothing%20Co/) · [Queries](week-07/queries.sql) |
 | Week 8 | Fresh Segments | [Case Study #8 - Fresh Segments](Case%20Study%20%238%20-%20Fresh%20Segments/) · [Queries](week-08/queries.sql) |
 
 
