@@ -1,7 +1,7 @@
 # 1️⃣ Case Study #1 - Danny's Diner
 - Dataset: Case Study #1 - Danny's Diner  
 - Source: DB Fiddle https://www.db-fiddle.com/f/2rM8RAnq7h5LLDTzZiRWcd/138  
-- Queried using: MySQL Workbench  
+- Queried using: Microsoft SQL Server Management Studio 
 
 ***
 
@@ -18,6 +18,8 @@ The database schema for this case study can be found here:
 - The sales table contains information about customer, orders, including the customer ID, order date, and product ID. 
 - The menu table contains, information about the products available for purchase, including the product ID,  product name, and price. 
 - The members table contains information about customers who are members,  including the customer ID and join date.
+
+📎 __Please refer to the following sources for more detailed information: [8 Week SQL Challenge](https://8weeksqlchallenge.com/)__
 
 ***
 
