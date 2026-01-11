@@ -134,3 +134,30 @@ ORDER BY total_purcashed DESC;
 
 ### Answer
 - The most purchased item on the menu is ramen, which sells 8 times.
+
+---
+### 5. Which item was the most popular for each customer?
+
+````sql
+WITH popular_menu AS (
+	SELECT
+		sales.customer_id,
+		menu.product_name,
+		COUNT (sales.product_id) AS items,
+		DENSE_RANK() OVER (
+			PARTITION BY sales.customer_id
+			ORDER BY COUNT (sales.product_id) DESC) AS ranking
+	FROM dannys_dinner_db.dbo.sales
+	INNER JOIN dannys_dinner_db.dbo.menu
+		ON sales.product_id = menu.product_id
+	GROUP BY sales.customer_id, menu.product_name
+	)
+
+	SELECT 
+		customer_id,
+		product_name,
+		items
+	FROM popular_menu
+	WHERE ranking =1;
+````
+### Steps
