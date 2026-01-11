@@ -29,7 +29,8 @@ The database schema for this case study can be found here:
 ***
 
 ## Case Study Question and Answer
-__1. What is the total amount each customer spent at the restaurant?__
+
+### 1. What is the total amount each customer spent at the restaurant?
 
 ````sql
 SELECT
@@ -54,4 +55,25 @@ ORDER BY sales.customer_id ASC;
 - Customer C spent $36
 
 ---
+### 2. How many days has each customer visited the restaurant?
 
+````sql
+SELECT
+	customer_id,
+	COUNT(DISTINCT order_date) AS days_visit
+FROM dannys_dinner_db.dbo.sales
+GROUP BY customer_id;
+````
+#### Steps
+- To calculate how many days a customer has visited the restaurant, we need data from the __‘sales’__ table, specifically the __customer_id and order_date columns__ (to know when the customer placed their order).
+- Since we are only counting the number of days, not the number of orders, use __DISTINCT__.
+- DISTINCT is necessary because if a customer places more than one order in a single day, DISTINCT is needed to retrieve data for each unique order date.
+- Group the aggregated results by sales.customer_id using GROUP BY.
+
+#### Answer
+- Customer A has visited for 4 days.
+- Customer B has visited for 6 days.
+- Customer A has visited for 2 days.
+
+---
+### 3. What was the first item from the menu purchased by each customer?
