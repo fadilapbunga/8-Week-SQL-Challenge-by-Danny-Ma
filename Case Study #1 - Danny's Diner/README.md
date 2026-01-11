@@ -111,3 +111,26 @@ WHERE ranking = 1;
 - First item from the menu purchased by customer A are sushi and curry
 - First item from the menu purchased by customer B is curry
 - First item from the menu purchased by customer C is ramen.
+
+---
+### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+
+````sql
+SELECT
+	TOP 1
+	menu.product_name,
+	COUNT (sales.product_id) AS total_purcashed
+FROM dannys_dinner_db.dbo.sales
+INNER JOIN dannys_dinner_db.dbo.menu
+	ON menu.product_id = sales.product_id
+GROUP BY menu.product_name
+ORDER BY total_purcashed DESC;
+````
+### Steps
+- Information about how many times each menu item is ordered by customers is in the __‘sales’__ table, and information about each menu item name is in the __‘menu’__ table, so combine the two tables with __INNER JOIN__.
+- Count how many orders each menu item has using __COUNT__ and give the result a name, __‘total_purcashed’__.
+- Sort the results of how many orders each menu item has received from most to least using __ORDER BY total_purchased__ with the __DESC__ clause.
+- And since we only want to know the most purchased item on the menu, we can use the additional column __TOP 1__.
+
+### Answer
+- The most purchased item on the menu is ramen, which sells 8 times.
