@@ -77,3 +77,37 @@ GROUP BY customer_id;
 
 ---
 ### 3. What was the first item from the menu purchased by each customer?
+
+````sql
+WITH first_order AS (
+SELECT
+	sales.customer_id,
+	sales.order_date,
+	menu.product_name,
+	DENSE_RANK() OVER (
+		PARTITION BY sales.customer_id
+		ORDER BY sales.order_date) AS ranking
+FROM dannys_dinner_db.dbo.sales
+INNER JOIN dannys_dinner_db.dbo.menu
+	ON sales.product_id = menu.product_id
+)
+
+SELECT
+	customer_id,
+	product_name
+FROM first_order
+WHERE ranking = 1;
+````
+### Steps
+- This SQL Query uses __a common table expression (CTE)__ which creates a temporary query result named __first_order__.
+- This temporary query named first_order __combines__ the __sales__ and __menu tables__ and __sorts customer purchases__ by adding a new column called __‘ranking’__ using __DENSE RANK()__.
+- Since it will calculate the ranking per customer, use __PARTITION by sales.customer_id__.
+- Then __sort__ this CTE with __ORDER by sales.order_date__ or according to the order date from oldest to newest.
+- The final query then __filters__ the CTE result to retrieve __only the first purchased item per customer__ with the condition __WHERE ranking = 1__.
+
+‼️ __The use of DENSE RANK () is more recommended because if a customer buys more than one item on the first day, DENSE RANK () does not “delete” the menu items purchased at the same time.__
+
+### Answer
+- First item from the menu purchased by customer A are sushi and curry
+- First item from the menu purchased by customer B is curry
+- First item from the menu purchased by customer C is ramen.
