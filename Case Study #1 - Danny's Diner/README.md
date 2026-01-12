@@ -161,3 +161,16 @@ WITH popular_menu AS (
 	WHERE ranking =1;
 ````
 ### Steps
+- To find out the most popular rankings or menus, use CTE (Common Table Expression) or a temporary query to create rankings. And the temporary query is named 'popular_menu'.
+- Data related to the number of menus ordered by customers is in the ‘sales’ table, and data regarding product names and IDs is in the ‘menu’ table.
+- Combine the two tables using INNER JOIN based on product_id
+- Sort the most ordered menus by adding a new column using DENSE_RANK(), where the data is partitioned based on sales.customer_id and sorted by the number of item purchases (COUNT(sales.product_id)) from largest to smallest
+- The final query then filters the CTE result to retrieve only the most popular item per customer with the condition WHERE ranking = 1.
+
+### Answer
+- For Customer A, Ramen is the most popular items.
+- For Customer B, there are several the most popular items, which are Curry, Sushi, Ramen.
+- For Customer C, Ramen is the most popular items.
+
+---
+### 6. Which item was purchased first by the customer after they became a member?
